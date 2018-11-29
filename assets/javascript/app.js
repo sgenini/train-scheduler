@@ -64,12 +64,15 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(trainFrequency);
 
 //   Calculate arrival and minutes
-var trainStartFormat = moment(train.start, "HH:mm");
-console.log(trainStartFormat);
-var trainYesterday = trainStartFormat.subtract(1, "days");
+var trainStartFormatted = moment(train.start, "HH:mm");
+console.log(trainStartFormatted);
+
+var trainYesterday = trainStartFormatted.subtract(1, "days");
 console.log("trainYesterday: " + trainYesterday.format("MM/DD/YY HH:mm"));
+
 var trainArrival = moment().diff(trainYesterday, "minutes");
 console.log("trainArrival: " + trainArrival);
+
 var trainMinutes = train.frequency - (trainArrival % train.frequency);
 console.log("train.frequency: " + train.frequency);
 
