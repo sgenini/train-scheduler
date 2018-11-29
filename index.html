@@ -33,7 +33,7 @@
                       <strong>Current Train Schedule</strong>
                     </div>
                     <div class="card-body text-center">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="train-table">
                             <thead>
                                 <tr>
                                     <th scope="col">Train Name</th>
@@ -44,13 +44,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td id="name">Bob Belcher</td>
-                                    <td id="destination">Boss Man</td>
-                                    <td id="frequency">01/01/89</td>
-                                    <td id="next-arrival">341</td>
-                                    <td id="minutes-away">1000</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -76,9 +69,9 @@
                                 <label for="time-input">First Train Time (HH:mm - military time)</label>
                                 <input type="text" class="form-control text-input" id="time-input" placeholder="08:00">
                                 <label for="frequency-input">Frequency in Minutes</label>
-                                <input type="text" class="form-control text-input" id="frequency-input" placeholder="180">
+                                <input type="text" class="form-control text-input" id="frequency-input" placeholder="2880">
                             </div>
-                            <button type="submit" class="btn btn-primary mb-3 ml-3 text-center" id="add-item"><i class="fas fa-plus" id="fa-icon"></i>Add to List</button>
+                            <button type="submit" class="btn btn-primary mb-3 ml-3 text-center" id="add-train"><i class="fas fa-plus" id="fa-icon"></i>Add to List</button>
                         </form>
                     </div>
                 </div>
